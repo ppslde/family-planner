@@ -1,0 +1,15 @@
+{
+  "login": {
+    "dialog-title": "User login",
+    "username": "Username",
+    "password": "Password",
+    "username-hint": "Enter your username here...",
+    "password-hint": "Enter your secret password here..."
+  },
+  "shared":{
+    "ok": "Ok",
+    "cancel": "Cancel",
+    "required-field": "{{field}} is required",
+    "page-not-found": "Sorry, page not found..."
+  }
+}

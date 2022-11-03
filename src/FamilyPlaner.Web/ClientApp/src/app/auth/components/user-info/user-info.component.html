@@ -1,0 +1,13 @@
+<div *ngIf="userInfo != null" class="user-info">
+  <h4>{{userInfo.name}}</h4>
+  <button mat-icon-button>
+    <mat-icon>
+      <span class="material-icons-outlined">person</span>
+    </mat-icon>
+  </button>
+</div>
+<button mat-icon-button  (click)="doAuthAction(iconName)">
+  <mat-icon>
+    <span class="material-icons-outlined">{{iconName}}</span>
+  </mat-icon>
+</button>

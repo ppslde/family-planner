@@ -1,0 +1,15 @@
+{
+  "login": {
+    "dialog-title": "Benutzeranmeldung",
+    "username": "Benutzername",
+    "password": "Passwort",
+    "username-hint": "Gib dein Namen ein...",
+    "password-hint": "Gib dein geheimes Passwort ein..."
+  },
+  "shared":{
+    "ok": "Ok",
+    "cancel": "Abbrechen",
+    "required-field": "{{field}} ist erforderlich",
+    "page-not-found": "Entschuldige, die Seite wurde nicht gefunden..."
+  }
+}

@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  flex-direction: column;
+
+  .module-nav {
+    flex: 1;
+    display: flex;
+    align-self: end;
+    padding-right: 10px;
+
+    .mat-icon-button {
+      width: 20px;
+      height: 20px;
+      line-height: 25px;
+    }
+  }
+}

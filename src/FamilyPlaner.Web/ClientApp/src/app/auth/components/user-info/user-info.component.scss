@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .user-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    h4{
+      margin-right: 6px;
+    }
+  }
+}

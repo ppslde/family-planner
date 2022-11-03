@@ -1,0 +1,23 @@
+<h2 mat-dialog-title>{{'login.dialog-title' | translate}}</h2>
+
+<form [formGroup]="loginform" (ngSubmit)="saveForm()">
+  <mat-dialog-content>
+    <mat-form-field appearance="standard">
+      <mat-label>{{ 'login.username' | translate }}</mat-label>
+      <input matInput formControlName="name" placeholder="{{ 'login.username-hint' | translate }}">
+      <mat-error *ngIf="hasError('name', 'required')">{{'shared.required-field'| translate: {field: 'Username'} }}
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="standard">
+      <mat-label>{{ 'login.password' | translate }}</mat-label>
+      <input matInput formControlName="password" placeholder="{{ 'login.password-hint' | translate }}">
+      <mat-error *ngIf="hasError('password', 'required')">{{'shared.required-field'| translate: {field:'Password'} }}
+      </mat-error>
+    </mat-form-field>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button type="button" mat-button mat-dialog-close>{{'shared.cancel'|translate}}</button>
+    <button type="submit" mat-flat-button color="primary" [disabled]="inProgess">{{'shared.ok'|translate}}</button>
+  </mat-dialog-actions>
+</form>

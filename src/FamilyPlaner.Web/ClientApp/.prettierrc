@@ -1,0 +1,11 @@
+{
+  "trailingComma": "es5",
+  "tabWidth": 2,
+  "semi": true,
+  "singleQuote": true,
+  "indent_style": "space",
+  "indent_size": 2,
+  "max_line_length": 200,
+  "bracketSpacing": true,
+  "arrowParens": "avoid"
+}
