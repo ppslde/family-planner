@@ -9,7 +9,11 @@ import { ShopService } from '../../services/shop.service';
 export class ShopListEditorComponent implements OnInit {
   constructor(private srv: ShopService) {}
 
-  ngOnInit(): void {
-    this.srv.getShops();
+  async ngOnInit() {
+    let results = await Promise.allSettled([
+      this.srv.getShops(),
+      this.srv.getCategories(),
+    ]);
+    let x = results[0];
   }
 }

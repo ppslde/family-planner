@@ -1,17 +1,42 @@
 import { Injectable } from '@angular/core';
-import { IPaginatedListOfShopModel, IShopModel, ShopListClient } from '@shared-module';
+import {
+  CategoryClient,
+  IShopModel,
+  ItemClient,
+  PaginatedListOfCategoryModel,
+  PaginatedListOfShopModel,
+  ProductClient,
+  ShopClient,
+} from '@shared-module';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ShopService {
-  constructor(private shopListClient: ShopListClient) {}
+  constructor(
+    private shops: ShopClient,
+    private catefories: CategoryClient,
+    private products: ProductClient,
+    private items: ItemClient
+  ) {}
 
-  shops: IShopModel[] = [];
+  getCategories(): Promise<PaginatedListOfCategoryModel> {
+    return new Promise<PaginatedListOfCategoryModel>(resolve => {
+      this.catefories
+        .getCategoryProducts(undefined, undefined)
+        .subscribe(async v => {
+          resolve(v);
+        });
+    });
+  }
 
-  getShops() {
-    this.shopListClient.getShopss(undefined, undefined).subscribe(data => {
-      this.shops = data.items ?? [];
+  getShops(): Promise<PaginatedListOfShopModel> {
+    return new Promise<PaginatedListOfShopModel>(resolve => {
+      this.shops.getShopss(undefined, undefined).subscribe(async v => {
+        resolve(v);
+      });
     });
   }
 }
