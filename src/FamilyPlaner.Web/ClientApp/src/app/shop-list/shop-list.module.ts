@@ -5,7 +5,7 @@ import { ShopListRoutingModule } from './shop-list-routing.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { EntryPointComponent } from './components/entry-point/entry-point.component';
 import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
+import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
 
 @NgModule({
   declarations: [
